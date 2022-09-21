@@ -27,8 +27,25 @@
               src = ./.;
             } + /node_modules;
           package =
-            with purs-nix.ps-pkgs;
-            affjax.purs-nix-info // {
+            with purs-nix.ps-pkgs-ns.lovelaceAcademy;
+            {
+              version = "12.0.0";
+              dependencies =
+                [
+                  aff
+                  argonaut-core
+                  arraybuffer-types
+                  foreign
+                  form-urlencoded
+                  http-methods
+                  integers
+                  math
+                  media-types
+                  nullable
+                  refs
+                  unsafe-coerce
+                  web-xhr
+                ];
               foreign."Affjax" = { inherit node_modules; };
             };
         in
