@@ -9,4 +9,4 @@ generated-docs
 bower_components
 
 node_modules
-*.lock
+/result
